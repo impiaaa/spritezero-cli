@@ -2,6 +2,8 @@
 
 A command-line interface to [spritezero](https://github.com/mapbox/spritezero).
 
+This is a fork of the original [https://github.com/mapbox/spritezero-cli](https://github.com/mapbox/spritezero-cli).
+
 ## Installation
 
     npm install -g @beyondtracks/spritezero-cli
