@@ -1,5 +1,10 @@
 :warning: = breaking change
 
+## 2.2.0
+##### 2010-jun-25
+* Fork into @beyondtracks ownership
+* Update to spritezero 6.2.0-dev
+
 ## 2.1.0
 ##### 2017-jun-17
 * Update to spritezero 5.0.0
