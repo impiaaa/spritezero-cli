@@ -1,7 +1,11 @@
 :warning: = breaking change
 
+## 2.3.0
+##### 2020-apr-20
+* Update to spritezero 6.3.0 and other minor dependencies
+
 ## 2.2.0
-##### 2010-jun-25
+##### 2020-jun-25
 * Fork into @beyondtracks ownership
 * Update to spritezero 6.2.0-dev
 
