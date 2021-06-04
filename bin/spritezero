@@ -61,7 +61,7 @@ function loadFile (file, callback) {
     fs.readFile(file, function (err, res) {
         return callback(err, {
             svg: res,
-            id: path.basename(file).replace('.svg', '')
+            id: file.substring(input.length).replaceAll(path.sep, '_').replace('.svg', '')
         });
     });
 }
@@ -72,9 +72,15 @@ function sortById (a, b) {
 
 var q = queue(16);
 
-filepaths(input).forEach(function (file) {
-    q.defer(loadFile, file);
-});
+function scanFile(file) {
+    if (fs.statSync(file).isFile()) {
+        q.defer(loadFile, file);
+    }
+    else {
+        filepaths(file).forEach(scanFile);
+    }
+}
+filepaths(input).forEach(scanFile);
 
 q.awaitAll(function (err, buffers) {
     if (err) throw err;
